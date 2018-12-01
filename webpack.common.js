@@ -175,6 +175,17 @@ module.exports = {
 function htmlWebpackPluginSetting() {
   let htmlWebpackPluginList = []
   const enableHtmlWebpackHarddiskPlugin = true
+  const htmlWebpackPluginListData = [
+    {
+      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/index_2.ejs'),
+      filename: path.resolve(__dirname, 'index_2.html'),
+    },
+    {
+      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/contactUs.ejs'),
+      filename: path.resolve(__dirname, 'contactUs.html'),
+    },
+  ]
+
 
   htmlWebpackPluginList.push(
     new HtmlWebpackPlugin({
@@ -199,10 +210,13 @@ function htmlWebpackPluginSetting() {
     })
   )
 
+for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
+  const element = htmlWebpackPluginListData[index]
+  
   htmlWebpackPluginList.push(
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/index_2.ejs'),
-      filename: path.resolve(__dirname, 'index_2.html'),
+      template: element.template,
+      filename: element.filename,
       chunks: ['index'],
       HtmlWebpackPluginOverride: true,
       // hash:true,//防止缓存
@@ -218,6 +232,9 @@ function htmlWebpackPluginSetting() {
       // alwaysWriteToDisk: true
     })
   )
+}
+
+  
 
   if (enableHtmlWebpackHarddiskPlugin) {
     

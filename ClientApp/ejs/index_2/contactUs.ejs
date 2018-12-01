@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<%- include  ClientApp/ejs/index_2/public/style.ejs %>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> 
+      <% for (var css in htmlWebpackPlugin.files.css) { %>
+        <link href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+      <% } %>
+    <% } %>
+
+<!-- mainContent -->
+<%- include  ClientApp/ejs/index_2/public/header.ejs %>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-title">關於我們</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4">
+        <div class="info">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>11011<br/>台北市信義區信義路5段5號5A05</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p>sales@mterrace.com.tw</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+886 (0)2 5593 3978</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-8">
+        <div class="form">
+          <div id="sendmessage">感謝您的來信!將會由專人盡快與您聯繫</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="姓名" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="電話" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+            
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="內容"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">送出</button></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%- include  ClientApp/ejs/index_2/public/footer.ejs %>
+<%- include  ClientApp/ejs/index_2/public/script.ejs %>
+<!-- mainContent -->
+
+  <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+  <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %> <% } %>
+
+
+</body>
+</html>

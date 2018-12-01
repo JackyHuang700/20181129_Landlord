@@ -1,5 +1,52 @@
-$color: #faa;
+$mq1200: 1200px;
+$mq1920: 1920px;
+$mq992: 992px;
+$mq768: 768px;
+$mq576: 576px;
+$mq1023: 1023px;
+$templateColor: #fff;
 
-#app{
-  color: $color;
+*:not(i):not(span){
+  font-family: 'Righteous', cursive !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+#contact#contact{
+  min-height: 85.8%;
+  height: 85.8%;
+@media screen and (max-width: $mq1920){
+  padding: 14% 0;
+}
+
+
+  .info{
+
+@media screen and (max-width: $mq768){
+  margin-bottom: 30px;
+}
+
+    >div{
+      height: 50px;
+    }
+
+    i{
+      width: 20%;
+      min-height: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 50px;
+    }
+    p{
+      width: 80%;
+      height: 100%;
+      float: left;
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding: 0 10px;
+    }
+  }
 }

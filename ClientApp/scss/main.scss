@@ -166,6 +166,20 @@ padding-left: 8%;
   }
 }
 
+// dataTable
+.page-item.active .page-link.page-link{
+  border-color: $templateColorOG;
+  background-color: $templateColorOG;
+}
+
+.page-link.page-link{
+  color: $templateColorOG;
+
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba($templateColorOG,.25);
+  }
+}
+
 //overrider
 .site-footer .bottom.bottom{
   padding-top: 0;
@@ -303,6 +317,10 @@ padding-left: 8%;
 
 .o-1.o-1{
   opacity: 1;
+}
+
+.o-5{
+  opacity: .5;
 }
 
 

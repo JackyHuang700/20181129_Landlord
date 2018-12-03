@@ -184,6 +184,18 @@ function htmlWebpackPluginSetting() {
       template: path.resolve(__dirname, 'ClientApp/ejs/index_2/contactUs.ejs'),
       filename: path.resolve(__dirname, 'contactUs.html'),
     },
+    {
+      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/experienceCase.ejs'),
+      filename: path.resolve(__dirname, 'experienceCase.html'),
+    },
+    {
+      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/introduction.ejs'),
+      filename: path.resolve(__dirname, 'introduction.html'),
+    },
+    {
+      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/professionTeam.ejs'),
+      filename: path.resolve(__dirname, 'professionTeam.html'),
+    },
   ]
 
 

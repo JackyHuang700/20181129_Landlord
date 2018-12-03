@@ -50,3 +50,145 @@ html, body {
     }
   }
 }
+
+
+//
+#introduction{
+  .officeIntroduction{
+  h2{
+    color: #199EB8;
+    margin-bottom: 20px;
+  }
+  p{
+    padding: 10px 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.card{
+  background-color: #F3F3F3;
+}
+
+.features{
+padding-top: 50px;
+}
+
+}
+
+//
+.team{
+  .card{
+    margin: 0 10px 8px;
+
+&:hover{
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translate3d(0,-2px,0);
+}
+
+.card-title-wrap{
+  padding-left: 10px;
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  transition-property: background-color, color;
+
+.card-title{
+  font-weight: bold;
+}
+
+  .card-text{
+    padding-left: 15px;
+  }
+}
+  }
+}
+
+// 
+.hero2{
+  
+}
+
+//
+.cta.cta{
+  .btn-ghost{
+    top: 2px;
+  }
+
+  p{
+    @media screen and (max-width: $mq992){
+      padding-bottom: 15px;
+    }
+  }
+}
+
+//
+.hero.hero{
+position: relative;
+background-image: none;
+height: 100vh;
+
+  video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// modal 
+.pr-8x{
+  padding-right: 8px;
+}
+
+.fz-12{
+  font-size: 12px;
+}
+
+.px-120x{
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.py-20x{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-30x{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.px-10p{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.bgcRed{
+  background-color: red;
+}
+
+.bgc2{
+  background-color: #F3F3F3;
+}
+
+.mx-25p{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.pl-110x{
+  padding-left: 110px;
+}
+
+.o-1.o-1{
+  opacity: 1;
+}
+
+
+.fz-15{
+  font-size: 15px;
+}

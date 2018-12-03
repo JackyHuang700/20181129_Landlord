@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<%- include  ClientApp/ejs/index_2/public/style.ejs %>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> 
+      <% for (var css in htmlWebpackPlugin.files.css) { %>
+        <link href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+      <% } %>
+    <% } %>
+
+<!-- mainContent -->
+<%- include  ClientApp/ejs/index_2/public/header.ejs %>
+
+<section class="team" id="team">
+    <div class="container">
+      <h2 class="text-center">專業團隊</h2>
+  
+      <div class="row">
+        <div class="col-sm-4 col-xs-6">
+          <div class="card card-block">
+            <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-1.jpg">
+              <div class="card-title-wrap">
+                <span class="card-title">學經歷</span>
+                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
+              </div>
+  
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+  
+                <nav class="social-nav">
+                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
+            </nav>
+  
+            <p>
+              Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+            </p>
+          </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-sm-4 col-xs-6">
+        <div class="card card-block">
+          <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-2.jpg">
+              <div class="card-title-wrap">
+                <span class="card-title">學經歷</span>
+                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
+              </div>
+  
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+  
+                <nav class="social-nav">
+                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
+          </nav>
+  
+          <p>
+            Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  
+    <div class="col-sm-4 col-xs-6">
+      <div class="card card-block">
+        <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-3.jpg">
+              <div class="card-title-wrap">
+                <span class="card-title">學經歷</span>
+                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
+              </div>
+  
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+  
+                <nav class="social-nav">
+                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
+        </nav>
+  
+        <p>
+          Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+      </div>
+      </a>
+    </div>
+    </div>
+  
+    <div class="col-sm-4 col-xs-6">
+      <div class="card card-block">
+        <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-4.jpg">
+              <div class="card-title-wrap">
+                <span class="card-title">學經歷</span>
+                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
+              </div>
+  
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+  
+                <nav class="social-nav">
+                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
+        </nav>
+  
+        <p>
+          Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+      </div>
+      </a>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+<%- include  ClientApp/ejs/index_2/public/footer.ejs %>
+<%- include  ClientApp/ejs/index_2/public/script.ejs %>
+<!-- mainContent -->
+
+  <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+  <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %> <% } %>
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include ClientApp/ejs/index_2/public/style.ejs %> <%if
+    (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+    <!-- mainContent -->
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+    <section id="introduction">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="container text-center officeIntroduction">
+              <h2>事務所介紹</h2>
+              <p class="text-left">
+                20
+                年多專精代書權威推薦，買賣繼承贈與擁有最全面的實務經驗。與銀行國
+                稅局地政處合作二十餘年，熟知內部作業眉角。<br />許多高難度案件都是透過本
+                事務所解決，一般人並無從得知。找好代書避免浪費時間所託非人、不必分
+                找多人，徒增困擾。專辦大台北縣市買賣繼承贈與銀行貸款設定等案件，細
+                心負責信用卓著值得您託付。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row bgc2">
+          <div class="col-12">
+            <section class="features">
+              <div class="container">
+                <h2 class="text-center">營業項目介紹</h2>
+
+                <div class="row">
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-rocket"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Custom Design</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-envelope"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Responsive Layout</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-bell"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Innovative Ideas</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-database"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Good Documentation</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-cutlery"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Excellent Features</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                      <div>
+                        <div class="feature-icon">
+                          <span class="fa fa-dashboard"></span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3>Retina Ready</h3>
+
+                        <p>
+                          Eque feugiat contentiones ei has. Id summo mundi
+                          explicari his, nec in maiorum scriptorem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %> <%- include
+    ClientApp/ejs/index_2/public/script.ejs %>
+    <!-- mainContent -->
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+  </body>
+</html>

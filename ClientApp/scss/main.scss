@@ -6,6 +6,7 @@ $mq576: 576px;
 $mq1023: 1023px;
 $templateColor: #fff;
 $templateColorOG: #199EB8;
+$templateColorOG2: #1EBFDE;
 
 *:not(i):not(span){
   font-family: 'Righteous', cursive !important;
@@ -185,6 +186,42 @@ padding-left: 8%;
   border-width: 0;
 }
 
+//
+.columnIntroduction2{
+  .title{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    // padding-bottom: 10px;
+    // margin-bottom: 15px;
+  }
+
+  .artcleMsg,
+  .artcle{
+    padding-top: 4%;
+    border-top-width: 5px;
+    border-top-style: solid;
+  }
+
+  
+  .artcleMsg{
+    border-top-color: $templateColorOG;
+  }
+  .artcle{
+    border-top-color: $templateColorOG2;
+  }
+
+  .artcleMsg{
+    p:nth-child(1),
+    p:nth-child(2){
+      opacity: .60;
+    }
+  }
+
+  .artcle{
+
+  }
+}
+
 //overrider
 .site-footer .bottom.bottom{
   padding-top: 0;
@@ -347,3 +384,18 @@ padding-left: 8%;
 .colo2{
   color: $templateColorOG;
 }
+
+.fontStyle{
+  border-bottom: 3px solid $templateColorOG;
+}
+
+.mw-170x{
+  max-width: 170px;
+}
+
+.md-mt-15x{
+  @media screen and (max-width: $mq992){
+    margin-top: 15px;
+  }
+}
+

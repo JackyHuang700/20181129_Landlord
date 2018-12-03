@@ -21,8 +21,6 @@
 <!-- Main Stylesheet File -->
 <link href="wwwroot/vendor2/bell/css/style.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
  
 
     <!-- mainContent -->
@@ -31,19 +29,19 @@
   <div class="container">
 
     <div id="logo" class="pull-left">
-      <a href="index.html"><img src="wwwroot/vendor2/bell/img/logo-nav.png" alt="" title=""></a>
+      <a href="/index_2.html"><img src="wwwroot/vendor2/bell/img/logo-nav.png" alt="" title=""></a>
       <!-- Uncomment below if you prefer to use a text image -->
       <!--<h1><a href="#hero">Bell</a></h1>-->
     </div>
 
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li><a href="#">首頁</a></li>
-        <li><a href="#">營業項目</a></li>
-        <li><a href="#">專業團隊</a></li>
+        <li><a href="/index_2.html">首頁</a></li>
+        <li><a href="/introduction.html">營業項目</a></li>
+        <li><a href="/professionTeam.html">專業團隊</a></li>
         <li><a href="#">專欄介紹</a></li>
-        <li><a href="#">經手案例</a></li>
-        <li><a href="#">聯絡我們</a></li>
+        <li><a href="/experienceCase.html">經手案例</a></li>
+        <li><a href="/contactUs.html">聯絡我們</a></li>
         <!-- <li><a href="#about">About Us</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -81,14 +79,14 @@
     <div class="container py-9p">
       <div class="row">
         <div class="col-12">
-          <div class="card bs-1">
+          <div class="card card2 bs-1">
             <div class="card-header text-center bgc5 text-white fz-25">經手案例</div>
             <div class="card-body">
               <section class="py-5">
                 <div class="container">
                   <div class="row">
                     <div class="accordion" id="accordionExample">
-                      <div class="card">
+                      <div class="card card2">
                         <div class="card-header" id="headingOne">
                           <h5 class="mb-0">
                             <button class="btn btn-link font-weight-normal" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -115,7 +113,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card card2">
                         <div class="card-header" id="headingTwo">
                           <h5 class="mb-0">
                             <button class="btn btn-link font-weight-normal collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -141,7 +139,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card card2">
                         <div class="card-header" id="headingThree">
                           <h5 class="mb-0">
                             <button class="btn btn-link font-weight-normal collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -183,29 +181,35 @@
     <div class="container-fluid">
       <div class="row bgc3 py-10x">
         <div class="col-lg-6 col-xs-12 text-lg-left footerMsg">
+            <p class="fz-15 mb-2">聯絡資訊</p>
             <p class="o-1 fz-15">
-              <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; +886
+              <i class="fa fa-phone fz-20 pl-6x pr-12x colo2" aria-hidden="true"></i>&nbsp;&nbsp; +886
               123456789
             </p>
-            <p class="o-1 fz-15"><i class="fab fa-line"></i>&nbsp;&nbsp;&nbsp;<span class="fz-17">ms579</span></p>
+            <p class="o-1 fz-15">
+                <img class="w-30x" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQdSURBVGhD7ZldSBRRFMcvpYUSVBSl+WTUQxAR9JKpYUEpPogmvVT0VkFR0FOBbyF+ZJag1UsEadCTH/VSZPQx7baZabtpWqh9uGYqC7ltpununuacvfvl3NQZ7+5G7H/54c7Oveec/8y9d8YZFldcccX1n+oZ282es8tMYfdUWiPMPTVXtUoWzy5BJrZBDfxYDQox4pF6EFN5NQb1gqWpJr4IgkcXrGFRZvA0iwLHAoU95FXplG9OiIPGDgNzRmFXBIFiTTWvTod8K4co2JyssayBop4iKB0shRsjN6DF0ULgd/wN92EbUd95UdhdXp0OKWpXUTABS01L4WDvQVCcCnjUz3zCNianifokmBKEMYVgTbq1QCN73u6B/sl+XqJ+Yd+9XXuFsTVEwgieheqhavCqn8UKY9R8raGYolwBZBvBhPWj9bwMeWoYbZjbjGwjF+0XeWr5qhqqEuYkZBrJsGaA2+vmaeULY2faMjV5CZlGno4/5SkjJ1z9RLmlGdnUvkkzuUs+l0DtcC3f8qm4txhav7dCs6MZ8rrzYNIzSb9jgfnd+XTUc97mwMb2jcRO60747f1NbVCYY/PrzWG5CVlGTvWf4qmCyrJlwaH3h/iWTystK6HcXg7nP52nfif7T9Lv14av0fb4zDj93d+1H859OgeV9kraH6rTA6cDeQPIMoITcbYWYgRpcjRpjFwYvAADkwMwNj3GewaFS7u/bwBZRm6O3ORpgprPCH4//P4wrLaspqOPcfxG/Cw3Lw8bWqhbo7fC2hCyjJTZy3iaoBZi5If7B435RFMixfEbOTNwhuaS9aeV9wxKuAzLMnL0w1GeJig0sr1zO1TYK+jq7HQ7NUZQHa4OWGZaRnH8Rgp7CqkfHv3ZOvLhSFhuQpaRVZZVmiFwrO9YYD8OEbPTTKtQo6ORrtTZtmzeEqBuuA62dGyBGe8MpLenB/qltqXClGeKtwLKgUPRvz+ALCNIJG5NZuvq8FVNXkKmkbS2NHC5XTylfOEKtu7lOk1eQqYRpOBdQURuUzDmvq59wpyEbCPI8b7jUs3g1fxE3wlhrgCRMILkdueCY8bBSzEuPCB41yDKEUakjCBrX66lyYkrkRFNeCbgQM8BYWwNkTTiJ6UtBc5+PAuvXK9g2jvNy5xbvb96YWvHVmE8IdEwEkqSOQl22XbB9W/Xecla3R67DSterBD2/yvRNhIKDp1Q4ZzCWxpR23mJlZFkczKtRn7dGbvz92vEQjBoxNADulC2dW4jA52uTvrfQ9RGFwYf0C36kSne7e54swOWPF8i3K8bhVXx6nTIxLKFwWKJwjJ5dTqFj/JFAWPDA16VAeHLlX/lRY+FredVGZTPTCzPzH32hKXwaiQIX7Io7JJKdF6G4sQ2PCfiiiuuuP5tMfYHCw026EHt8MQAAAAASUVORK5CYII=">
+              <!-- <i class="fab fa-line"></i> -->
+              &nbsp;&nbsp;&nbsp;<span class="fz-17">ms579</span>
+            </p>
         </div>
-        <div class="col-lg-6 col-xs-12 text-lg-right text-center footerMsg2">
-
+        <div class="col-lg-2 col-xs-12 text-lg-right text-center">&nbsp;</div>
+        <div class="col-lg-4 col-xs-12 text-lg-left text-center footerMsg2">
+            <p class="fz-15 mb-2">快速連結</p>
           <ul class="list-inline">
             <li class="list-inline-item fz-15">
-              <a href="#">營業項目</a>
+              <a href="/introduction.html">營業項目</a>
             </li>
             <li class="list-inline-item fz-15">
-              <a href="#">專業團隊</a>
+              <a href="/professionTeam.html">專業團隊</a>
             </li>
             <li class="list-inline-item fz-15">
               <a href="#">專欄介紹</a>
             </li>
             <li class="list-inline-item fz-15">
-              <a href="#">經手案例</a>
+              <a href="/experienceCase.html">經手案例</a>
             </li>
             <li class="list-inline-item fz-15">
-              <a href="#">聯絡我們</a>
+              <a href="/contactUs.html">聯絡我們</a>
             </li>
           </ul>
         </div>

@@ -180,6 +180,11 @@ padding-left: 8%;
   }
 }
 
+.table-bordered.table-bordered,
+.table-bordered.table-bordered td, .table-bordered.table-bordered th{
+  border-width: 0;
+}
+
 //overrider
 .site-footer .bottom.bottom{
   padding-top: 0;

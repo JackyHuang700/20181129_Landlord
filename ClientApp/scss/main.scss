@@ -5,6 +5,7 @@ $mq768: 768px;
 $mq576: 576px;
 $mq1023: 1023px;
 $templateColor: #fff;
+$templateColorOG: #199EB8;
 
 *:not(i):not(span){
   font-family: 'Righteous', cursive !important;
@@ -12,6 +13,10 @@ $templateColor: #fff;
 
 html, body {
   height: 100%;
+}
+
+video{
+  object-fit: fill;
 }
 
 #contact#contact{
@@ -56,7 +61,7 @@ html, body {
 #introduction{
   .officeIntroduction{
   h2{
-    color: #199EB8;
+    color: $templateColorOG;
     margin-bottom: 20px;
   }
   p{
@@ -127,6 +132,7 @@ padding-top: 50px;
 .hero.hero{
 position: relative;
 background-image: none;
+// background: url(https://video.wixstatic.com/video/11062b_79271b7012564ed497d2774a895ab7fd/1080p/mp4/file.mp4);
 height: 100vh;
 
   video{
@@ -138,13 +144,96 @@ height: 100vh;
   }
 }
 
+//
+.footerMsg.footerMsg{
+
+padding-left: 8%;
+
+  @media screen and (max-width: $mq992){
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 10px;
+  }
+}
+
+.footerMsg2.footerMsg2{
+  padding-right: 8%;
+  
+  @media screen and (max-width: $mq992){
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 10px;
+  }
+}
+
+//overrider
+.site-footer .bottom.bottom{
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #2E2E2E;
+}
+
+.btn.btn{
+  font-size: 16px;
+  border-width: 2px;
+  padding: 15px 40px;
+}
+
+.btn-link.btn-link:hover,
+.btn-full.btn-full:hover{
+  background-color: transparent;
+  border-color: $templateColorOG;
+  color: $templateColorOG;
+}
+
+.btn-link.btn-link{
+  border-radius: 10px;
+}
+
+.btn-link.btn-link:hover,
+.btn-link.btn-link:focus{
+  text-decoration: none;
+}
+
+.card.card{
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+
 // modal 
 .pr-8x{
   padding-right: 8px;
 }
 
+.pb-20x{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pb-10x{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .fz-12{
   font-size: 12px;
+}
+
+.fz-15{
+  font-size: 15px;
+}
+.fz-17{
+  font-size: 17px;
+}
+.fz-22{
+  font-size: 22px;
+}
+.fz-25{
+  font-size: 25px;
+}
+
+.py-9p{
+  padding-top: 9%;
+  padding-bottom: 9%;
 }
 
 .px-120x{
@@ -152,6 +241,10 @@ height: 100vh;
   padding-right: 120px;
 }
 
+.py-10x{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .py-20x{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -162,9 +255,15 @@ height: 100vh;
   padding-bottom: 30px;
 }
 
+
 .px-10p{
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.px-35x{
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .bgcRed{
@@ -173,6 +272,18 @@ height: 100vh;
 
 .bgc2{
   background-color: #F3F3F3;
+}
+
+.bgc3{
+  background-color: #3B3B3B;
+  // background-color: #383838;
+}
+
+.bgc4.bgc4{
+  background-color: #edf6ff;
+}
+.bgc5.bgc5{
+  background-color: #1895AD;
 }
 
 .mx-25p{
@@ -191,4 +302,8 @@ height: 100vh;
 
 .fz-15{
   font-size: 15px;
+}
+
+.bs-1{
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.2);
 }

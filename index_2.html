@@ -5,6 +5,8 @@
     <title>Document</title>
   </head>
   <body>
+
+
     <!-- Favicon -->
 <link href="wwwroot/vendor2/bell/img/favicon.ico" rel="icon">
 
@@ -20,6 +22,8 @@
 
 <!-- Main Stylesheet File -->
 <link href="wwwroot/vendor2/bell/css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
  
 
@@ -106,7 +110,7 @@
         <div class="media mx-25p py-30x">
           <img class="mr-3" src="http://fakeimg.pl/130x150/" alt="Generic placeholder image">
           <div class="media-body text-left">
-            <h5 class="mt-0">Media heading</h5>
+            <h5 class="mt-0 fz-22">營業項目</h5>
             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
             <p class="text-right">
                 <a class="btn btn-full" href="#about">立即前往</a>
@@ -118,7 +122,31 @@
         <div class="media mx-25p py-30x d-flex flex-row-reverse">
           <img class="mr-3" src="http://fakeimg.pl/130x150/" alt="Generic placeholder image">
           <div class="media-body text-left">
-            <h5 class="mt-0">Media heading</h5>
+            <h5 class="mt-0 fz-22">專業團隊</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+            <p class="text-left">
+                <a class="btn btn-full" href="#about">立即前往</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="media mx-25p py-30x">
+          <img class="mr-3" src="http://fakeimg.pl/130x150/" alt="Generic placeholder image">
+          <div class="media-body text-left">
+            <h5 class="mt-0 fz-22">專欄介紹</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+            <p class="text-right">
+                <a class="btn btn-full" href="#about">立即前往</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bgc2">
+        <div class="media mx-25p py-30x d-flex flex-row-reverse">
+          <img class="mr-3" src="http://fakeimg.pl/130x150/" alt="Generic placeholder image">
+          <div class="media-body text-left">
+            <h5 class="mt-0 fz-22">經手案例</h5>
             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
             <p class="text-left">
                 <a class="btn btn-full" href="#about">立即前往</a>
@@ -592,49 +620,59 @@
     <!-- /Team -->
     <!-- @component: footer -->
 
-    
-<footer class="site-footer">
+    <footer class="site-footer">
   <div class="bottom">
-    <div class="container">
-      <div class="row">
+    <div class="container-fluid">
+      <div class="row bgc3 py-10x">
+        <div class="col-lg-6 col-xs-12 text-lg-left footerMsg">
+            <p class="o-1 fz-15">
+              <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; +886
+              123456789
+            </p>
+            <p class="o-1 fz-15"><i class="fab fa-line"></i>&nbsp;&nbsp;&nbsp;<span class="fz-17">ms579</span></p>
+        </div>
+        <div class="col-lg-6 col-xs-12 text-lg-right text-center footerMsg2">
 
-        <div class="col-lg-6 col-xs-12 text-lg-left text-center">
-          <p class="copyright-text">
-            © 2017 by mTERRACE Inc.
-          </p>
+          <ul class="list-inline">
+            <li class="list-inline-item fz-15">
+              <a href="#">營業項目</a>
+            </li>
+            <li class="list-inline-item fz-15">
+              <a href="#">專業團隊</a>
+            </li>
+            <li class="list-inline-item fz-15">
+              <a href="#">專欄介紹</a>
+            </li>
+            <li class="list-inline-item fz-15">
+              <a href="#">經手案例</a>
+            </li>
+            <li class="list-inline-item fz-15">
+              <a href="#">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pb-10x">
+        <div class="col-12 text-white text-center px-10p">
           <div class="credits">
-            <!--
+            <p class="copyright-text d-inline-block pr-8x">
+              Copyright © 2018 地政士 版權所有
+            </p>
+             <!--
               All the links in the footer should remain intact.
               You can delete the links only if you purchased the pro version.
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
             -->
-           Designed by <a href="https://www.mterrace.com.tw/">mTERRACE</a>
+            Designed by <a href="https://www.mterrace.com.tw/">mTERRACE</a>
           </div>
         </div>
-
-        <div class="col-lg-6 col-xs-12 text-lg-right text-center">
-          <p class="o-1 fz-15">電話:&nbsp;123456789</p>
-          <p class="o-1 fz-15">id:&nbsp;ms579</p>
-          
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <a href="#">電話:&nbsp;123456789</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">id:&nbsp;ms579</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </div>
 </footer>
-<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a> <!-- Required JavaScript Libraries -->
+<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+ <!-- Required JavaScript Libraries -->
 <script src="wwwroot/vendor2/bell/lib/jquery/jquery.min.js"></script>
 <script src="wwwroot/vendor2/bell/lib/jquery/jquery-migrate.min.js"></script>
 <script src="wwwroot/vendor2/bell/lib/superfish/hoverIntent.js"></script>

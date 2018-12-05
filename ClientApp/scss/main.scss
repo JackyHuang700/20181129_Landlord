@@ -300,6 +300,10 @@ border-top-style: solid;
   
   .artcleMsg{
     border-top-color: $templateColorOG;
+
+    @media screen and (max-width: 742px){
+      padding: 10px 0 10px 20px;
+    }
   }
   .artcle{
     border-top-color: $templateColorOG2;

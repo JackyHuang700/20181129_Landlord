@@ -1,142 +1,295 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body>
+    <%- include ClientApp/ejs/index_2/public/style.ejs %> <%if
+    (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
 
-<%- include  ClientApp/ejs/index_2/public/style.ejs %>
+    <!-- mainContent -->
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
 
-    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> 
-      <% for (var css in htmlWebpackPlugin.files.css) { %>
-        <link href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-      <% } %>
-    <% } %>
+    <section class="team" id="team">
+      <div class="container">
+        <h2 class="text-center">專業團隊</h2>
 
-<!-- mainContent -->
-<%- include  ClientApp/ejs/index_2/public/header.ejs %>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-block">
+              <a href="#"
+                ><img
+                  alt=""
+                  class="team-img"
+                  src="wwwroot/vendor2/bell/img/team-1.jpg"
+                />
+                <div class="card-title-wrap text-center px-0 pb-0 ">
+                  <span class="card-title color3">王瑞鴻</span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">學歷</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    嘉義大學管理研究所
+                  </span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    中國文化大學估價師學分班
+                  </span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">經歷</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    信義房屋簽約代書
+                  </span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">證照</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    地政士
+                  </span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    不動產經紀人
+                  </span>
+                </div>
 
-<section class="team" id="team">
-    <div class="container">
-      <h2 class="text-center">專業團隊</h2>
-  
-      <div class="row">
-        <div class="col-sm-4 col-xs-6">
-          <div class="card card-block">
-            <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-1.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">學經歷</span>
-                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
-              </div>
-  
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-  
-                <nav class="social-nav">
-                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
-            </nav>
-  
-            <p>
-              Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-            </p>
+                <div class="team-over">
+                  <h4 class="hidden-md-down">聯絡我</h4>
+
+                  <nav class="social-nav">
+                    <a href="#"></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    <!-- Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis. -->
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-          </a>
+
+          <div class="col-lg-4">
+            <div class="card card-block">
+              <a href="#"
+                ><img
+                  alt=""
+                  class="team-img"
+                  src="wwwroot/vendor2/bell/img/team-2.jpg"
+                />
+                <div class="card-title-wrap text-center px-0 pb-0 ">
+                  <span class="card-title color3">林鈺娟</span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">學歷</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    東海大學政治與法律&nbsp;學士
+                  </span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">經歷</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    信義房屋簽約代書
+                  </span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    桃園市政府土地重劃專員
+                  </span>
+                </div>
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">證照</span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    地政士
+                  </span>
+                  <span class="card-text">
+                    <i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i>
+                    不動產經紀人
+                  </span>
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">聯絡我</h4>
+
+                  <nav class="social-nav">
+                    <a href="#"></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a
+                    ><a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    <!-- Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis. -->
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-block">
+              <a href="#"
+                ><img
+                  alt=""
+                  class="team-img"
+                  src="wwwroot/vendor2/bell/img/team-2.jpg"
+                />
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">學經歷</span>
+                  <span class="card-text"
+                    ><i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i
+                    >Art Director</span
+                  >
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">聯絡我</h4>
+
+                  <nav class="social-nav">
+                    <a href="#"></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a
+                    ><a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    <!-- Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis. -->
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-block">
+              <a href="#"
+                ><img
+                  alt=""
+                  class="team-img"
+                  src="wwwroot/vendor2/bell/img/team-3.jpg"
+                />
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">學經歷</span>
+                  <span class="card-text"
+                    ><i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i
+                    >Art Director</span
+                  >
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">聯絡我</h4>
+
+                  <nav class="social-nav">
+                    <a href="#"></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a
+                    ><a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    <!-- Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis. -->
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-block">
+              <a href="#"
+                ><img
+                  alt=""
+                  class="team-img"
+                  src="wwwroot/vendor2/bell/img/team-4.jpg"
+                />
+                <div class="card-title-wrap mt--1">
+                  <span class="card-title">學經歷</span>
+                  <span class="card-text"
+                    ><i
+                      class="fa fa-chevron-right pr-8x fz-12"
+                      aria-hidden="true"
+                    ></i
+                    >Art Director</span
+                  >
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">聯絡我</h4>
+
+                  <nav class="social-nav">
+                    <a href="#"></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a
+                    ><a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    <!-- Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis. -->
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-  
-      <div class="col-sm-4 col-xs-6">
-        <div class="card card-block">
-          <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-2.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">學經歷</span>
-                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
-              </div>
-  
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-  
-                <nav class="social-nav">
-                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
-          </nav>
-  
-          <p>
-            Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-          </p>
-        </div>
-        </a>
-      </div>
-    </div>
-  
-    <div class="col-sm-4 col-xs-6">
-      <div class="card card-block">
-        <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-3.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">學經歷</span>
-                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
-              </div>
-  
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-  
-                <nav class="social-nav">
-                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
-        </nav>
-  
-        <p>
-          Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-        </p>
-      </div>
-      </a>
-    </div>
-    </div>
-  
-    <div class="col-sm-4 col-xs-6">
-      <div class="card card-block">
-        <a href="#"><img alt="" class="team-img" src="wwwroot/vendor2/bell/img/team-4.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">學經歷</span>
-                <span class="card-text"><i class="fa fa-chevron-right pr-8x fz-12" aria-hidden="true"></i>Art Director</span>
-              </div>
-  
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-  
-                <nav class="social-nav">
-                  <a href="#"></i></a> <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-envelope"></i></a>
-        </nav>
-  
-        <p>
-          Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-        </p>
-      </div>
-      </a>
-    </div>
-    </div>
-    </div>
-    </div>
-  </section>
+    </section>
 
-<%- include  ClientApp/ejs/index_2/public/footer.ejs %>
-<%- include  ClientApp/ejs/index_2/public/script.ejs %>
-<!-- mainContent -->
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %> <%- include
+    ClientApp/ejs/index_2/public/script.ejs %>
+    <!-- mainContent -->
 
-  <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
 
-  <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-  <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-  <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-  <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-  <% } %> <% } %>
-
-
-</body>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+  </body>
 </html>

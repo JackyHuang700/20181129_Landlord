@@ -194,9 +194,15 @@ transition-property: background-color, color;
   }
 }
 
-// 
+//
 .hero2{
-  
+
+  .media.media{
+  @media screen and (max-width: $mq992){
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 }
 
 //
@@ -321,6 +327,18 @@ border-top-style: solid;
   }
 }
 
+
+.hero3{
+  @media screen and (max-width: $mq576){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  // h2{
+  // }
+  // p{
+  // }
+}
+
 //overrider
 .team .card-title-wrap .card-title.card-title {
   color: #999;
@@ -408,6 +426,10 @@ padding-bottom: 10px;
 }
 .fz-25{
   font-size: 25px;
+
+  @media screen and (max-width: $mq768){
+    font-size: 17px;
+  }
 }
 
 .py-9p{
@@ -506,6 +528,10 @@ margin-right: 25%;
 }
 .fz-60.fz-60{
   font-size: 60px;
+
+  @media screen and (max-width: $mq768){
+    font-size: 35px;
+  }
 }
 
 .bs-1{
@@ -542,5 +568,9 @@ text-indent: 13px;
   @media screen and (max-width: $mq992){
     margin-top: 15px;
   }
+}
+
+.height500.height500{
+  height: 500px;
 }
 

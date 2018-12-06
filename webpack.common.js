@@ -243,10 +243,10 @@ for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
       // hash:true,//防止缓存
       outputFile: {
         vendor: 'wwwroot/vendor/dll.vendor.js',
-        isProd: true,
+        isProd: false,
         port: devServerPort
       },
-      minify: true,
+      minify: false,
       // 啟用手動排序
       chunksSortMode: 'manual'
       // 跟著HtmlWebpackHarddiskPlugin套件

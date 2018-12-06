@@ -235,6 +235,7 @@ for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
   
   htmlWebpackPluginList.push(
     new HtmlWebpackPlugin({
+      inject: false,
       template: element.template,
       filename: element.filename,
       chunks: ['index'],
@@ -242,7 +243,7 @@ for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
       // hash:true,//防止缓存
       outputFile: {
         vendor: 'wwwroot/vendor/dll.vendor.js',
-        isProd: false,
+        isProd: true,
         port: devServerPort
       },
       minify: true,

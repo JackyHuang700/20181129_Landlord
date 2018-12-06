@@ -186,8 +186,7 @@
 
     <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
 
-    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
-    htmlWebpackPlugin.files.chunks) { %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
     %>

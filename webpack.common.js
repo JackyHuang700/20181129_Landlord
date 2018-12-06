@@ -1,19 +1,15 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+
 // happypack
 const HappyPack = require('happypack')
 const {
   osCpusLength,
   commonInclude,
   commonExclude,
-  // devServer 用這個
-  devServerPort,
-  // expressDevServer 用這個
-  expressDevServerPort
 } = require('./webpack.define.js')
 
 // console.log(`aaaaaaaaaaaaaaaaaa: ${process.env.NODE_ENV}`)
@@ -164,113 +160,10 @@ module.exports = {
     //   $: "jquery",
     //   jQuery: "jquery"
     // })
-  ].concat(htmlWebpackPluginSetting()),
+  ],
   stats: {
     // `webpack --colors` 等同于
     colors: true
   }
 }
 
-// htmlWebpackPlugin 設定
-function htmlWebpackPluginSetting() {
-  let htmlWebpackPluginList = []
-  const enableHtmlWebpackHarddiskPlugin = true
-  const htmlWebpackPluginListData = [
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/index_2.ejs'),
-      filename: path.resolve(__dirname, 'index.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/contactUs.ejs'),
-      filename: path.resolve(__dirname, 'contactUs.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/experienceCase.ejs'),
-      filename: path.resolve(__dirname, 'experienceCase.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/introduction.ejs'),
-      filename: path.resolve(__dirname, 'introduction.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/professionTeam.ejs'),
-      filename: path.resolve(__dirname, 'professionTeam.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/columnIntroduction.ejs'),
-      filename: path.resolve(__dirname, 'columnIntroduction.html'),
-    },
-    {
-      template: path.resolve(__dirname, 'ClientApp/ejs/index_2/columnIntroduction2.ejs'),
-      filename: path.resolve(__dirname, 'columnIntroduction2.html'),
-    },
-  ]
-
-
-  htmlWebpackPluginList.push(
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: path.resolve(__dirname, 'ClientApp/indexTemplate.html'),
-      filename: path.resolve(__dirname, 'indexTemplate.html'),
-      chunks: ['index'],
-      // 跳過那些模塊
-      // excludeChunks: [],
-      HtmlWebpackPluginOverride: true,
-      // hash:true,//防止缓存
-      outputFile: {
-        vendor: 'wwwroot/vendor/dll.vendor.js',
-        isProd: false,
-        port: devServerPort
-      },
-      minify: true,
-      // 啟用手動排序
-      chunksSortMode: 'manual'
-      // 跟著HtmlWebpackHarddiskPlugin套件
-      // alwaysWriteToDisk: true
-    })
-  )
-
-for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
-  const element = htmlWebpackPluginListData[index]
-  
-  htmlWebpackPluginList.push(
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: element.template,
-      filename: element.filename,
-      chunks: ['index'],
-      HtmlWebpackPluginOverride: true,
-      // hash:true,//防止缓存
-      outputFile: {
-        vendor: 'wwwroot/vendor/dll.vendor.js',
-        isProd: false,
-        port: devServerPort
-      },
-      minify: {
-        removeComments: true,
-        collapseWhitespace:true,
-        collapseInlineTagWhitespace:true
-      },
-      // 啟用手動排序
-      chunksSortMode: 'manual'
-      // 跟著HtmlWebpackHarddiskPlugin套件
-      // alwaysWriteToDisk: true
-    })
-  )
-}
-
-  
-
-  if (enableHtmlWebpackHarddiskPlugin) {
-    
-    for (let index = 0; index < htmlWebpackPluginList.length; index++) {
-      let element = htmlWebpackPluginList[index]
-      element.options.alwaysWriteToDisk = true
-    }
-
-    //強制"HtmlWebpackPlugin"進行編譯成實體檔案
-    htmlWebpackPluginList.push(new HtmlWebpackHarddiskPlugin())
-  }
-
-  return htmlWebpackPluginList
-}

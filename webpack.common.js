@@ -207,28 +207,28 @@ function htmlWebpackPluginSetting() {
   ]
 
 
-  // htmlWebpackPluginList.push(
-  //   new HtmlWebpackPlugin({
-  //     inject: false,
-  //     template: path.resolve(__dirname, 'ClientApp/indexTemplate.html'),
-  //     filename: path.resolve(__dirname, 'index.html'),
-  //     chunks: ['index'],
-  //     // 跳過那些模塊
-  //     // excludeChunks: [],
-  //     HtmlWebpackPluginOverride: true,
-  //     // hash:true,//防止缓存
-  //     outputFile: {
-  //       vendor: 'wwwroot/vendor/dll.vendor.js',
-  //       isProd: false,
-  //       port: devServerPort
-  //     },
-  //     minify: true,
-  //     // 啟用手動排序
-  //     chunksSortMode: 'manual'
-  //     // 跟著HtmlWebpackHarddiskPlugin套件
-  //     // alwaysWriteToDisk: true
-  //   })
-  // )
+  htmlWebpackPluginList.push(
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: path.resolve(__dirname, 'ClientApp/indexTemplate.html'),
+      filename: path.resolve(__dirname, 'indexTemplate.html'),
+      chunks: ['index'],
+      // 跳過那些模塊
+      // excludeChunks: [],
+      HtmlWebpackPluginOverride: true,
+      // hash:true,//防止缓存
+      outputFile: {
+        vendor: 'wwwroot/vendor/dll.vendor.js',
+        isProd: false,
+        port: devServerPort
+      },
+      minify: true,
+      // 啟用手動排序
+      chunksSortMode: 'manual'
+      // 跟著HtmlWebpackHarddiskPlugin套件
+      // alwaysWriteToDisk: true
+    })
+  )
 
 for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
   const element = htmlWebpackPluginListData[index]
@@ -243,10 +243,14 @@ for (let index = 0; index < htmlWebpackPluginListData.length; index++) {
       // hash:true,//防止缓存
       outputFile: {
         vendor: 'wwwroot/vendor/dll.vendor.js',
-        isProd: true,
+        isProd: false,
         port: devServerPort
       },
-      minify: false,
+      minify: {
+        removeComments: true,
+        collapseWhitespace:true,
+        collapseInlineTagWhitespace:true
+      },
       // 啟用手動排序
       chunksSortMode: 'manual'
       // 跟著HtmlWebpackHarddiskPlugin套件

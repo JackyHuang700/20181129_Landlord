@@ -88,7 +88,6 @@ module.exports = {
             vendor: 'wwwroot/vendor/dll.vendor.js',
             isProd: isProd,
             port: module.exports.devServerPort
-            // port: module.exports.devServerPort
           },
           minify: minify,
           // 啟用手動排序

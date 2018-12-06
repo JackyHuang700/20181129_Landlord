@@ -340,6 +340,10 @@ border-top-style: solid;
 }
 
 //overrider
+.scrolltop{
+  z-index: 100;
+}
+
 .team .card-title-wrap .card-title.card-title {
   color: #999;
 }

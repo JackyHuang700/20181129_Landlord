@@ -17,9 +17,6 @@ html, body {
   height: 100%;
 }
 
-video{
-  object-fit: fill;
-}
 
 #contact#contact{
   min-height: 85.8%;
@@ -235,20 +232,33 @@ transition-property: background-color, color;
 .hero.hero{
 position: relative;
 
-// background: url(https://video.wixstatic.com/video/11062b_79271b7012564ed497d2774a895ab7fd/1080p/mp4/file.mp4);
-height: 100vh;
+    // background: url(https://video.wixstatic.com/video/11062b_79271b7012564ed497d2774a895ab7fd/1080p/mp4/file.mp4);
+    height: 100vh;
 
-background-image: none;
-video{
-    position: absolute;
+    background-image: none;
+    overflow: hidden;
 
-top: 0;
+    // video{
+    //   position: absolute;
 
-left: 0;
+    //   top: 0;
 
-width: 100%;
+    //   left: 0;
 
-height: 100%;
+    //   width: 100%;
+
+    //   height: 100%;
+    // }
+
+    .video{
+      object-fit: fill;
+      // width: 100%;
+      // height: 100%;
+      // max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
     }
 }
 
@@ -330,7 +340,8 @@ border-top-style: solid;
 
   .artcleMsg{
     p:nth-child(1),
-    p:nth-child(2){
+    p:nth-child(2),
+    p:nth-child(3){
       opacity: .60;
     }
   }

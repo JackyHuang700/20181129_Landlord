@@ -3,6 +3,7 @@ $mq1920: 1920px;
 $mq992: 992px;
 $mq768: 768px;
 $mq576: 576px;
+$mq425: 425px;
 $mq1023: 1023px;
 $templateColor: #fff;
 $templateColorOG: #199EB8;
@@ -92,15 +93,28 @@ line-height: 50px;
       }
 
     .line{
-padding-left: 10px;
+      padding-left: 10px;
 
-@media screen and (max-width:$mq992){
-  padding-left: 6px;
-}
+      @media screen and (max-width:$mq992){
+        padding-left: 6px;
+      }
 
-@media screen and (max-width: $mq768){
-  padding-left: 18px;
-}
+      @media screen and (max-width: $mq768){
+        padding-left: 8px;
+      }
+
+      @media screen and (max-width: $mq425){
+        padding-left: 15px;
+      }
+
+      @media screen and (max-width: 375px){
+        padding-left: 12px;
+      }
+
+      @media screen and (max-width: 320px){
+        padding-left: 10px;
+      }
+
 
 
       >img{
@@ -109,23 +123,22 @@ padding-left: 10px;
         // margin-right: 9px;
         
         @media screen and (max-width: $mq768){
-          padding: 0 12px;
+          padding: 0 0;
+          // padding: 0 12px;
           // margin: 0;
         }
       }
 
       >p{
 
-
-
         padding: 6px 0 6px 12px;
 
         @media screen and (max-width: 1200px){
           padding-left: 10px;
         }
-        @media screen and (max-width: $mq768){
-          padding-left: 14px;
-        }
+        // @media screen and (max-width: $mq768){
+        //   padding-left: 14px;
+        // }
       }
       
     }
@@ -337,6 +350,24 @@ border-top-style: solid;
   // }
   // p{
   // }
+}
+
+//
+.accordion{
+    @media screen and (max-width: $mq425){
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .btn.btn{
+      white-space: normal;
+
+      @media screen and (max-width: $mq425){
+          padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+      }
+    }
 }
 
 //overrider

@@ -23,7 +23,7 @@ html, body {
 
 height: 85.8%;
   @media screen and (max-width: $mq1920){
-  padding: 14% 0;
+  padding: 10% 0;
  
 }
 
@@ -242,6 +242,7 @@ position: relative;
 
     background-image: none;
     overflow: hidden;
+    padding: 0;
 
     // video{
     //   position: absolute;
@@ -481,6 +482,9 @@ padding-bottom: 10px;
 .fz-17{
   font-size: 17px;
 }
+.fz-19.fz-19.fz-19{
+  font-size: 19px !important;
+}
 .fz-22{
   font-size: 22px;
 }
@@ -610,6 +614,15 @@ margin-right: 25%;
   color: #333;
 }
 
+
+.fbColor{
+  color: #3b5998;
+
+  &::before{
+    color: #3b5998;
+  }
+}
+
 .fontStyle{
   border-bottom: 3px solid $templateColorOG;
 }
@@ -634,3 +647,6 @@ text-indent: 13px;
   height: 500px;
 }
 
+.border-10{
+  border-radius: 5px;
+}

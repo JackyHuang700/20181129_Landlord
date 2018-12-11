@@ -289,23 +289,22 @@ position: relative;
       // width: 100%;
       // height: 100%;
       // max-width: 100%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      // height: 100%;
-      z-index: -1;
-      width: 100%;
+      height: 100%;
+      z-index: -100;
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-       top: -34px;
+       top: 0;
        left: 0;
        transform: none;
 
       }
 
       @supports (-ms-ime-align:auto) {
-        top: -34px;
+        top: 0;
         left: 0;
         transform: none;
       }
@@ -589,6 +588,11 @@ padding-right: 35px;
 
   padding-left: 35px;
   }
+
+  .bgcWhite{
+    background-color: #fff;
+  }
+  
 
 .bgcRed{
   background-color: red;

@@ -1,7 +1,7 @@
 $mq1200: 1200px;
 $mq1920: 1920px;
 $mq992: 992px;
-$mq768: 768px;
+$mq768: 767px;
 $mq576: 576px;
 $mq425: 425px;
 $mq1023: 1023px;
@@ -47,7 +47,7 @@ height: auto;
   
 }
 
-  .info{
+  .info.info{
 
 @media screen and (max-width: $mq768){
   margin-bottom: 30px;
@@ -85,13 +85,11 @@ line-height: 50px;
 
       margin-bottom: 0;
 
-      padding: 6px 0 6px 10px;
-
-      padding-bottom: 0;
-
-      padding-left: 0;
+      padding: 6px 0 0 0;
 
       width: 80%;
+
+      
       }
 
     .line{
@@ -102,7 +100,7 @@ line-height: 50px;
       }
 
       @media screen and (max-width: $mq768){
-        padding-left: 8px;
+        padding-left: 30.5px;
       }
 
       @media screen and (max-width: $mq425){
@@ -128,6 +126,7 @@ line-height: 50px;
           padding: 0 0;
           // padding: 0 12px;
           // margin: 0;
+          width: 8.5%;
         }
 
         @media screen and (max-width: $mq425){
@@ -147,6 +146,20 @@ line-height: 50px;
 
         @media screen and (max-width: 1200px){
           padding-left: 10px;
+        }
+
+        @media screen and (max-width: $mq768){
+          padding-left: 31px;
+        }
+
+        @media screen and (max-width: $mq425){
+          padding-left: 17px;
+        }
+        @media screen and (max-width: 375px){
+          padding-left: 14px;
+        }
+        @media screen and (max-width: 320px){
+          padding-left: 8px;
         }
         // @media screen and (max-width: $mq768){
         //   padding-left: 14px;
@@ -288,7 +301,7 @@ position: relative;
        top: -34px;
        left: 0;
        transform: none;
-       
+
       }
 
       @supports (-ms-ime-align:auto) {

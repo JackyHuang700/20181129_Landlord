@@ -193,5 +193,15 @@
     %>
     <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     <% } %> <% } %>
+
+    <!-- <script>
+       $(document).ready(function() {
+        var videoDom = document.getElementsByClassName('video')[0]
+        console.log('videoDom.offsetTop:' ,videoDom.offsetTop);
+        // videoDom.style.marginTop  = 0
+        // videoDom.style.marginLeft = 0
+        // $(videoDom).offset({ top: 0, left: 0 });
+      })
+    </script> -->
   </body>
 </html>

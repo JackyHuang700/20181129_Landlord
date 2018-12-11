@@ -9,6 +9,11 @@ $templateColor: #fff;
 $templateColorOG: #199EB8;
 $templateColorOG2: #1EBFDE;
 
+// *{
+//   margin: 0px !important;
+//   padding: 0px !important;
+// }
+
 *:not(i):not(span){
   font-family: 'Righteous', cursive !important;
 }
@@ -101,11 +106,11 @@ line-height: 50px;
       }
 
       @media screen and (max-width: $mq425){
-        padding-left: 15px;
+        padding-left: 19px;
       }
 
       @media screen and (max-width: 375px){
-        padding-left: 12px;
+        padding-left: 15px;
       }
 
       @media screen and (max-width: 320px){
@@ -123,6 +128,16 @@ line-height: 50px;
           padding: 0 0;
           // padding: 0 12px;
           // margin: 0;
+        }
+
+        @media screen and (max-width: $mq425){
+          width: 11%;
+        }
+        @media screen and (max-width: 375px){
+          width: 12%;
+        }
+        @media screen and (max-width: 320px){
+          width: 14%;
         }
       }
 
@@ -268,6 +283,18 @@ position: relative;
       // height: 100%;
       z-index: -1;
       width: 100%;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+       top: -34px;
+       left: 0;
+       transform: none;
+      }
+
+      @supports (-ms-ime-align:auto) {
+        top: -34px;
+        left: 0;
+        transform: none;
+      }
     }
 
     .heroBtn{
@@ -418,6 +445,13 @@ border-top-style: solid;
 padding-bottom: 0;
 
 background-color: #2E2E2E;
+
+    img{
+      @media screen and (max-width: $mq425){
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
 .btn.btn{
@@ -490,6 +524,8 @@ padding-bottom: 10px;
 .fz-22{
   font-size: 22px;
 }
+
+
 .fz-25{
   font-size: 25px;
 
@@ -570,6 +606,13 @@ margin-right: 25%;
   margin-top: -1px;
 }
 
+.pl-3x-mq320{
+  padding-left: 3px;
+}
+
+.pl-2x{
+  padding-left: 2px;
+}
 .pl-6x{
   padding-left: 6px;
 }
@@ -602,6 +645,10 @@ margin-right: 25%;
 
 .bs-1{
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.w-24x{
+  width: 24px;
 }
 
 .w-30x{

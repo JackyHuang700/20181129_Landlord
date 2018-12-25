@@ -17,6 +17,7 @@
 
     <section class="hero">
       <video
+        id="bgcVideo"
         role="presentation"
         preload="auto"
         playsinline=""
@@ -203,5 +204,45 @@
         // $(videoDom).offset({ top: 0, left: 0 });
       })
     </script> -->
+
+    <script>
+      $(function () {
+  
+          resize_tab();
+      });
+  
+      $(window).resize(function () {
+          resize_tab();
+      }).resize();
+  
+      function resize_tab() {
+  
+          var viewportWidth = $(window).innerWidth();
+          var viewportHeight = $(window).innerHeight();
+  
+          var width = $('#bgcVideo').width();
+          var height = $('#bgcVideo').height();
+  
+  
+          if ((viewportWidth / viewportHeight) > (width / height)) {
+  
+              $('#bgcVideo').css({
+                  'width': '100%',
+                  'height': 'auto',
+                  'margin-left': 0 - width / 2,
+                  'margin-top': 0 - height / 2
+              });
+  
+  
+          } else {
+              $('#bgcVideo').css({
+                  'width': 'auto',
+                  'height': '100%',
+                  'margin-left': 0 - width / 2,
+                  'margin-top': 0 - height / 2
+              });
+          }
+      }
+  </script>
   </body>
 </html>

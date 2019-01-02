@@ -195,15 +195,6 @@
 
     <!-- 讓背景永遠置中 -->
     <script>
-      $(function () {
-  
-          resize_tab();
-      });
-  
-      $(window).resize(function () {
-          resize_tab();
-      }).resize();
-  
       function resize_tab() {
   
           var viewportWidth = $(window).innerWidth();
@@ -226,12 +217,21 @@
           } else {
               $('#bgcVideo').css({
                   'width': 'auto',
-                  'height': '113%',
+                  'height': '100%',
                   'margin-left': 0 - width / 2,
                   'margin-top': 0 - height / 2
               });
           }
       }
+
+      $(function () {
+  
+        resize_tab();
+      });
+
+      $(window).resize(function () {
+        resize_tab();
+      }).resize();
   </script>
   </body>
 </html>

@@ -727,3 +727,14 @@ text-indent: 13px;
 .border-10{
   border-radius: 5px;
 }
+
+// 
+.facebook{
+  &:hover, &~p:hover{
+    color: #3b5998;
+  }
+}
+
+.colorWhite{
+  color: white;
+}
